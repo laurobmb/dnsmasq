@@ -18,3 +18,4 @@ COPY dnsmasq.conf /etc/dnsmasq.conf
 EXPOSE 53 53/udp
 
 ENTRYPOINT ["dnsmasq","--no-daemon","--log-queries","--keep-in-foreground","--log-facility=-"]
+
