@@ -1,5 +1,7 @@
 [![Docker Repository on Quay](https://quay.io/repository/laurobmb/dnsmasq-app/status "Docker Repository on Quay")](https://quay.io/repository/laurobmb/dnsmasq-app)
 
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/laurobmb/dnsmasq-app)
+
 # dnsmasq
 
 # Build
