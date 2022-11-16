@@ -1,0 +1,37 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ingress-nginx-tcp
+  namespace: ingress-nginx
+  labels:
+spec:
+  externalTrafficPolicy: Local
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+    - name: https
+      port: 443
+      targetPort: https
+  externalIPs:
+    - 192.168.123.232
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ingress-nginx-udp
+  namespace: ingress-nginx
+spec:
+  externalTrafficPolicy: Local
+  type: LoadBalancer
+  ports:
+    - name: dns
+      port: 5353
+      targetPort: 5353
+      protocol: UDP
+  externalIPs:
+    - 192.168.123.232
+
